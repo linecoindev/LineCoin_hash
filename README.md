@@ -1,7 +1,7 @@
-gobyte_hash (python) v1.3.1
+line_hash (python) v1.3.1
 ===========================
 
-Python module for GoByte's NeoScrypt hashing.
+Python module for LineCoin's NeoScrypt hashing.
 
 
 Install

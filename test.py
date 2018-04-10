@@ -1,12 +1,12 @@
-import gobyte_hash
+import line_hash
 from binascii import unhexlify, hexlify
 
 import unittest
 
-# GoByte block #1
-# moo@b1:~/.gobyte$ gobyted getblockhash 1
+# LineCoin block #1
+# moo@b1:~/.line$ lined getblockhash 1
 # 00000c8a1ff01bae3f3875c81cb14115429af5744643b34b4ad1cbb7d2d59ca2
-# moo@b1:~/.gobyte$ gobyted getblock 00000c8a1ff01bae3f3875c81cb14115429af5744643b34b4ad1cbb7d2d59ca2
+# moo@b1:~/.line$ lined getblock 00000c8a1ff01bae3f3875c81cb14115429af5744643b34b4ad1cbb7d2d59ca2
 #{
 #  "hash": "00000c8a1ff01bae3f3875c81cb14115429af5744643b34b4ad1cbb7d2d59ca2",
 #  "confirmations": 14729,
@@ -43,8 +43,8 @@ class TestSequenceFunctions(unittest.TestCase):
         self.block_header = unhexlify(header_hex)
         self.best_hash = best_hash
 
-    def test_gobyte_hash(self):
-        self.pow_hash = hexlify(gobyte_hash.getPoWHash(self.block_header))
+    def test_line_hash(self):
+        self.pow_hash = hexlify(line_hash.getPoWHash(self.block_header))
         self.assertEqual(self.pow_hash.decode(), self.best_hash)
 
 

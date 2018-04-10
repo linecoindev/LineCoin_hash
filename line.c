@@ -1,4 +1,4 @@
-#include "gobyte.h"
+#include "line.h"
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
@@ -17,7 +17,7 @@
 #include "sha3/sph_echo.h"
 
 
-void gobyte_hash(const char* input, int len, char* output)
+void line_hash(const char* input, int len, char* output)
 {
     sph_blake512_context     ctx_blake;
     sph_bmw512_context       ctx_bmw;
